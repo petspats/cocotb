@@ -32,10 +32,11 @@ include $(SIM_ROOT)/makefiles/Makefile.inc
 INCLUDES    +=
 GCC_ARGS    += -DFILTER
 LIBS        := $(PYLIBS)
-echo "GPI LOGGING LIBS" $(LIBS)
 SRCS        := gpi_logging.c
-
+$(info gpi_logging LIBS = $(LIBS))
 LIB_NAME    := libgpilog
+
+
 
 all: $(LIB_DIR)/$(LIB_NAME).$(LIB_EXT)
 
