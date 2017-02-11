@@ -67,7 +67,9 @@ else
 $(error ERROR: Unable to find a valid python-config.)
 endif
 
-PYLIBS = $(shell $(PY_CFG_EXE) --libs)
+#PYLIBS = $(shell $(PY_CFG_EXE) --libs)
+PYLIBS = -lpython3.6m -lpthread -ldl  -lutil -lrt -lm
+
 $(info pylibs Linux = $(PYLIBS))
 
 PYTHON_INCLUDEDIR := $(shell $(PYTHON_BIN) -c 'from __future__ import print_function; import distutils.sysconfig; print(distutils.sysconfig.get_python_inc())')
