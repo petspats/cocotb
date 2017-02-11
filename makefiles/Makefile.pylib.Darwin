@@ -68,6 +68,7 @@ $(error ERROR: Unable to find a valid python-config.)
 endif
 
 PYLIBS = $(shell $(PY_CFG_EXE) --libs)
+$(info pylibs Darwin = $(LIBS))
 
 PYTHON_INCLUDEDIR := $(shell python -c 'from __future__ import print_function; import distutils.sysconfig; print(distutils.sysconfig.get_python_inc())')
 PYTHON_DYN_LIB:=$(shell python -c 'from __future__ import print_function; from distutils import sysconfig; print(sysconfig.get_config_var("LDLIBRARY"))')

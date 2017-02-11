@@ -51,7 +51,7 @@ empty :=
 PYTHON_VERSION=$(subst $(period),$(empty),$(LOCAL_PYTHON_VERSION))
 PYTHON_INCLUDEDIR := $(shell $(PYTHON_BIN) -c 'import distutils.sysconfig; print distutils.sysconfig.get_python_inc()')
 
-# PYLIBS = -lPython$(PYTHON_VERSION)
-PYLIBS = -lPython3.6m
+PYLIBS = -lPython$(PYTHON_VERSION)
+$(info pylibs MSYS = $(LIBS))
 
 PYTHON_DYN_LIB = Python$(PYTHON_VERSION).dll
